@@ -1,0 +1,24 @@
+name: Baixar mídias do Magnific
+on:
+  push:
+    branches: [claude/stoic-fermat-1r1cg0]
+    paths: [review-casa-das-tintas/baixar.sh]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  baixar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Baixar arquivos
+        run: sh review-casa-das-tintas/baixar.sh
+      - name: Salvar no ramo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p midias-brutas
+          mv review-casa-das-tintas/*.mp4 review-casa-das-tintas/*.png midias-brutas/
+          git add -f midias-brutas
+          git commit -m "Adiciona mídias brutas baixadas do Magnific"
+          git push
