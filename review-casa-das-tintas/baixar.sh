@@ -1,5 +1,6 @@
 #!/bin/sh
 # Baixa os arquivos gerados no Magnific (precisa do pikaso.cdnpk.net liberado na rede)
+# rodado pelo GitHub Actions
 cd "$(dirname "$0")"
 set -e
 dl(){ curl -sSL --retry 3 -o "$1" "$2"; echo "ok $1 $(stat -c%s "$1")"; }
