@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Casa Das Tintas · Tintas e cores no Aruana, Aracaju</title>
 <meta name="description" content="Tintas, cor preparada na hora e a quantidade certa pra sua parede. Casa Das Tintas, Av. Melício Machado, 540, Aruana, Aracaju. Chame no WhatsApp.">
-<meta name="theme-color" content="#150F24">
+<meta name="theme-color" content="#1D0A1B">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Casa Das Tintas · Acerte na primeira demão">
@@ -19,24 +19,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --canvas:#150F24;
-  --canvas-deep:#0F0A1B;
-  --panel:#21183A;
-  --panel-2:#2A2048;
+  --canvas:#1D0A1B;
+  --canvas-deep:#140712;
+  --panel:#2B1229;
+  --panel-2:#371A33;
   --accent:#FFC21A;
   --accent-hover:#FFD457;
   --accent-muted:rgba(255,194,26,.18);
-  --text-secondary:#C9C0DA;
+  --text-secondary:#D8C6D2;
   --text-primary:#F7F2EA;
-  --line:rgba(201,192,218,.22);
-  --line-strong:#8F82AD;
+  --line:rgba(216,198,210,.2);
+  --line-strong:#A0809A;
   --t-red:#FF4A2E; --t-yellow:#FFC21A; --t-teal:#00B3A4; --t-blue:#3554FF; --t-pink:#E8318A;
   --ease-out:cubic-bezier(.16,1,.3,1);
   --ease-io:cubic-bezier(.65,0,.35,1);
   --f-display:'Bricolage Grotesque',system-ui,sans-serif;
   --f-body:'Figtree',system-ui,sans-serif;
   --f-mono:'JetBrains Mono',ui-monospace,monospace;
-  --tshadow:0 1px 2px rgba(8,5,14,.95),0 3px 12px rgba(8,5,14,.78),0 10px 44px rgba(8,5,14,.8);
+  --tshadow:0 1px 2px rgba(14,4,10,.95),0 3px 12px rgba(14,4,10,.78),0 10px 44px rgba(14,4,10,.8);
   --wrap:min(1180px,calc(100% - 40px));
 }
 *{box-sizing:border-box}
@@ -54,7 +54,7 @@ p{margin:0}
 .mono{font-family:var(--f-mono);font-weight:500;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
 
 /* ambiente fixo: manchas de cor que derivam devagar */
-.env{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 50% 0%,#1E1534 0%,var(--canvas) 60%,var(--canvas-deep) 100%)}
+.env{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 50% 0%,#2A0F26 0%,var(--canvas) 60%,var(--canvas-deep) 100%)}
 .env i{position:absolute;width:52vmax;height:52vmax;border-radius:50%;filter:blur(90px);opacity:.16;animation:drift 72s var(--ease-io) infinite alternate}
 .env i:nth-child(1){background:var(--t-blue);left:-18vmax;top:-10vmax;animation-delay:-12s}
 .env i:nth-child(2){background:var(--t-pink);right:-20vmax;top:30vh;animation-delay:-31s;opacity:.11}
@@ -64,13 +64,14 @@ p{margin:0}
 
 /* navegação */
 .nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px max(20px,calc((100% - 1180px)/2));transition:background .5s var(--ease-out),backdrop-filter .5s var(--ease-out),padding .5s var(--ease-out)}
-.nav.solid{background:rgba(21,15,36,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding-top:10px;padding-bottom:10px;box-shadow:0 1px 0 var(--line)}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-weight:800;font-size:20px;letter-spacing:-.01em;text-shadow:var(--tshadow)}
+.nav.solid{background:rgba(29,10,27,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding-top:10px;padding-bottom:10px;box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:10px;white-space:nowrap;text-decoration:none;font-family:var(--f-display);font-weight:800;font-size:20px;letter-spacing:-.01em;text-shadow:var(--tshadow)}
 .brand svg{width:26px;height:30px;flex:none}
 .nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
 .nav ul a{text-decoration:none;font-weight:600;font-size:15px;color:var(--text-secondary);transition:color .3s var(--ease-out);text-shadow:var(--tshadow)}
 .nav ul a:hover{color:var(--text-primary)}
 @media (max-width:880px){.nav ul{display:none}}
+@media (max-width:400px){.brand{font-size:17px}.nav .btn.small{padding:9px 13px}}
 
 /* botões */
 .btn{--bg:var(--panel-2);--fg:var(--text-primary);position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:999px;background:var(--bg);color:var(--fg);font:600 16px/1 var(--f-body);text-decoration:none;border:1px solid var(--line-strong);text-shadow:none;cursor:pointer;transition:transform .35s var(--ease-out),background-color .35s var(--ease-out),border-color .35s var(--ease-out),box-shadow .35s var(--ease-out)}
@@ -98,7 +99,7 @@ p{margin:0}
 .poster.on{opacity:1}
 .stage video{object-fit:cover;opacity:0;transition:opacity .9s var(--ease-out);will-change:transform;transform:translateZ(0)}
 .stage.video-ready video{opacity:1}
-.scrim{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 120% 90% at 50% 45%,rgba(12,8,22,0) 35%,rgba(12,8,22,.62) 100%)}
+.scrim{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 120% 90% at 50% 45%,rgba(20,6,16,0) 35%,rgba(20,6,16,.62) 100%)}
 .ring{position:absolute;right:28px;bottom:28px;width:44px;height:44px;color:var(--accent);transform:rotate(-90deg);transition:opacity .6s var(--ease-out)}
 .ring circle:first-child{opacity:.2}
 .stage.video-ready .ring{opacity:0}
@@ -110,19 +111,23 @@ p{margin:0}
 /* faixas de texto */
 .band{position:absolute;z-index:2;text-shadow:var(--tshadow);opacity:0;pointer-events:none}
 .band.live{pointer-events:auto}
-.band::before{content:"";position:absolute;inset:-30% -18%;z-index:-1;pointer-events:none;opacity:calc(.25 + .75*var(--k,1));background:radial-gradient(ellipse 74% 62% at 50% 50%,rgba(10,6,18,var(--sa,.66)) 0%,rgba(10,6,18,calc(var(--sa,.66)*.66)) 46%,rgba(10,6,18,0) 76%)}
-.band.left{left:max(24px,6vw);top:50%;transform:translateY(-50%)}
-.band.right{right:max(24px,6vw);top:50%;transform:translateY(-50%);text-align:right}
+.band::before{content:"";position:absolute;inset:-34% -26%;z-index:-1;pointer-events:none;opacity:calc(.25 + .75*var(--k,1));background:radial-gradient(ellipse 74% 62% at 50% 50%,rgba(16,4,12,var(--sa,.66)) 0%,rgba(16,4,12,calc(var(--sa,.66)*.66)) 46%,rgba(16,4,12,0) 76%)}
+.band.left{left:max(24px,6vw);top:50%;transform:translateY(-50%);max-width:min(40vw,620px)}
+.band.right{right:max(24px,6vw);top:50%;transform:translateY(-50%);text-align:right;max-width:min(40vw,620px)}
 .band.center{left:50%;top:46%;transform:translate(-50%,-50%);text-align:center;width:min(980px,calc(100% - 40px))}
 .band .mono{color:var(--accent);display:block;margin-bottom:18px}
 .band .big{font-family:var(--f-display);font-weight:800;line-height:1.02;letter-spacing:-.02em;margin:0}
-.band h1,.band .big{font-size:clamp(44px,6.4vw,96px);max-width:11ch}
+.band h1,.band .big{font-size:clamp(40px,5.4vw,84px);max-width:11ch}
 .band.right .big{margin-left:auto}
 .band .sub{margin-top:18px;font-size:clamp(17px,1.5vw,21px);color:var(--text-primary);max-width:30ch}
 .band.right .sub{margin-left:auto}
 .band.center h2{font-size:clamp(48px,7.2vw,112px);max-width:13ch;margin:0 auto}
 .band.center .sub{margin:20px auto 0;max-width:40ch}
 .band.center .cta-row{justify-content:center;margin-top:30px}
+.band.settle{top:40%}
+.band.settle .big{font-size:clamp(44px,5.6vw,92px);max-width:9.5ch}
+.band.settle .cta-row{margin-top:28px;max-width:min(640px,46vw)}
+.fx-punch .big{max-width:7.5ch}
 .band .btn{text-shadow:none}
 .w{display:inline-block;white-space:nowrap}
 .c{display:inline-block}
@@ -140,7 +145,7 @@ p{margin:0}
 /* hero estático: celular, tablet em pé, toque em pé, celular deitado, movimento reduzido */
 .hero-static{display:none;position:relative;min-height:100vh;min-height:100svh;padding:120px 20px 70px;overflow:hidden;align-items:flex-end}
 .hero-static .art{position:absolute;inset:0;background-size:cover;background-position:center}
-.hero-static .art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,10,27,.35) 0%,rgba(15,10,27,.2) 35%,rgba(15,10,27,.86) 72%,var(--canvas) 100%)}
+.hero-static .art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,7,18,.35) 0%,rgba(20,7,18,.2) 35%,rgba(20,7,18,.86) 72%,var(--canvas) 100%)}
 .hero-static .inner{position:relative;z-index:1;width:100%;max-width:640px;text-shadow:var(--tshadow)}
 .hero-static .mono{color:var(--accent);display:block;margin-bottom:14px}
 .hero-static h1{font-size:clamp(40px,11vw,68px)}
@@ -169,10 +174,9 @@ main section{position:relative;padding:130px 0}
 .reveal.done .r,.reveal.done .r:nth-child(n){transition-delay:0s!important}
 
 /* assinatura: a borda que escorre */
-.drip-edge{position:absolute;left:0;right:0;bottom:-1px;height:140px;pointer-events:none;z-index:1;color:var(--fill,var(--canvas))}
+.drip-edge{position:absolute;left:0;right:0;top:100%;margin-top:-1px;height:140px;pointer-events:none;z-index:3;color:var(--fill,var(--canvas))}
 .drip-edge svg{width:100%;height:100%;display:block;overflow:visible}
 .drip-edge .drop{transform-box:fill-box;transform-origin:50% 0;transform:scaleY(calc(.08 + .92*var(--d,0)))}
-.drip-edge .bead{transform-box:fill-box;transform-origin:50% 50%;transform:translateY(calc(var(--d,0)*var(--len,60px))) scale(calc(.4 + .6*var(--d,0)))}
 
 /* gotas flutuando em nível de sussurro */
 .floaters{position:absolute;inset:0;pointer-events:none;overflow:hidden}
@@ -181,7 +185,7 @@ main section{position:relative;padding:130px 0}
 @keyframes float{0%{transform:translateY(30px);opacity:0}25%{opacity:.5}75%{opacity:.45}100%{transform:translateY(-120px);opacity:0}}
 
 /* 1. dores */
-.pains{background:linear-gradient(180deg,transparent,rgba(33,24,58,.55) 30%,rgba(33,24,58,.55) 70%,transparent)}
+.pains{background:linear-gradient(180deg,transparent,var(--panel) 32%);padding-bottom:70px!important}
 .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:64px}
 .pain{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:26px;padding:30px 28px 32px;overflow:hidden;transition:transform .5s var(--ease-out),border-color .5s var(--ease-out)}
 .pain:hover{transform:translateY(-6px);border-color:var(--line-strong)}
@@ -202,6 +206,9 @@ main section{position:relative;padding:130px 0}
 /* 2. calculadora */
 .calc{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;margin-top:56px;align-items:stretch}
 .calc form,.calc .out{background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:34px}
+.calc form{display:flex;flex-direction:column}
+.calc .tip{margin-top:auto;display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:18px;background:var(--panel-2);color:var(--text-secondary);font-size:15px}
+.calc .tip svg{flex:none;width:28px;height:28px;color:var(--accent)}
 .field{display:grid;gap:8px;margin-bottom:22px}
 .field label{font-weight:600}
 .field .row{display:flex;align-items:center;gap:14px}
@@ -233,7 +240,7 @@ main section{position:relative;padding:130px 0}
 
 /* 3. superfícies: faixas largas alternadas */
 .surf-list{margin-top:64px;display:grid;gap:26px}
-.surf{display:grid;grid-template-columns:1.25fr 1fr;align-items:center;gap:40px;padding:22px;border-radius:30px;background:rgba(33,24,58,.6);border:1px solid var(--line)}
+.surf{display:grid;grid-template-columns:1.25fr 1fr;align-items:center;gap:40px;padding:22px;border-radius:30px;background:rgba(43,18,41,.6);border:1px solid var(--line)}
 .surf:nth-child(even){grid-template-columns:1fr 1.25fr}
 .surf:nth-child(even) figure{order:2}
 .surf figure{margin:0;position:relative;border-radius:22px;overflow:hidden;aspect-ratio:16/10;background:linear-gradient(135deg,var(--g1),var(--g2))}
@@ -302,7 +309,7 @@ main section{position:relative;padding:130px 0}
 /* 8. chamada final */
 .final{text-align:center;padding:170px 0 150px!important;overflow:hidden}
 .final .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.5}
-.final .bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(21,15,36,.55),var(--canvas) 85%)}
+.final .bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(29,10,27,.55),var(--canvas) 85%)}
 .final .wrap{position:relative}
 .final h2{font-size:clamp(44px,6.6vw,100px);max-width:14ch;margin:0 auto;text-shadow:var(--tshadow)}
 .final p{margin:22px auto 0;max-width:46ch;color:var(--text-primary);font-size:19px;text-shadow:var(--tshadow)}
@@ -358,29 +365,29 @@ html.pinned .reveal .r{opacity:1;transform:none}
       <video id="hero-video" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
       <div class="scrim" aria-hidden="true"></div>
 
-      <div class="band left fx-drift" data-a="0" data-b="0.18" data-first style="--sa:.7">
+      <div class="band left fx-drift" data-a="0" data-b="0.18" data-first style="--sa:.9">
         <span class="mono">Casa Das Tintas · Aruana, Aracaju</span>
         <h1 class="big split">A cor que você imaginou.</h1>
         <p class="sub fade-sub" style="--sk:.35">Role e veja ela chegar na parede.</p>
       </div>
 
-      <div class="band right fx-weave" data-a="0.22" data-b="0.40" style="--sa:.66">
+      <div class="band right fx-weave" data-a="0.22" data-b="0.40" style="--sa:.9">
         <h2 class="big split">Cor igual ao catálogo.</h2>
         <p class="sub fade-sub">A gente prepara a sua cor na hora e confere com você antes de você levar.</p>
       </div>
 
-      <div class="band left fx-punch" data-a="0.44" data-b="0.62" style="--sa:.72">
+      <div class="band left fx-punch" data-a="0.42" data-b="0.565" style="--sa:1">
         <p class="big split" data-em="mais">Nem lata a mais.</p>
         <p class="big split" data-em="menos" style="margin-top:.12em">Nem lata a menos.</p>
       </div>
 
-      <div class="band right fx-scatter" data-a="0.66" data-b="0.82" data-spread="0.5" style="--sa:.68">
+      <div class="band right fx-scatter" data-a="0.62" data-b="0.82" data-spread="0.5" style="--sa:.9">
         <h2 class="big split">Parede, fachada, madeira ou portão.</h2>
         <p class="sub fade-sub">A tinta certa pra cada uma.</p>
       </div>
 
-      <div class="band center fx-rise" data-a="0.86" data-b="1" data-last data-ramp="0.08" style="--sa:.7">
-        <h2 class="split">Acerte na primeira demão.</h2>
+      <div class="band left settle fx-rise" data-a="0.86" data-b="1" data-last data-ramp="0.08" style="--sa:.74">
+        <h2 class="big split">Acerte na primeira demão.</h2>
         <p class="sub fade-sub" style="--sk:.66">Fale com a Casa Das Tintas do jeito que preferir.</p>
         <div class="cta-row fade-cta">
           <a class="btn primary js-wa" href="https://wa.me/5579981018248" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
@@ -434,7 +441,7 @@ html.pinned .reveal .r{opacity:1;transform:none}
         </article>
         <article class="pain r" style="--i:3;--gc:var(--t-teal);--gd:-3s">
           <div class="ill" aria-hidden="true">
-            <svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice"><rect x="40" y="24" width="220" height="104" rx="12" fill="#3A2F56"/><path d="M40 60h220M40 92h220" stroke="#4A3E68" stroke-width="2"/><path d="M52 36c40 10 70-6 110 6s60 2 86 8v66c-30-6-60 6-90-2s-70 6-106-4z" fill="#00B3A4" opacity=".55"/><path d="M90 50c20 6 40-4 60 2M120 96c26 4 50-6 80 0" stroke="#3A2F56" stroke-width="10" stroke-linecap="round" opacity=".7"/></svg>
+            <svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice"><rect x="40" y="24" width="220" height="104" rx="12" fill="#4A2444"/><path d="M40 60h220M40 92h220" stroke="#5A3254" stroke-width="2"/><path d="M52 36c40 10 70-6 110 6s60 2 86 8v66c-30-6-60 6-90-2s-70 6-106-4z" fill="#00B3A4" opacity=".55"/><path d="M90 50c20 6 40-4 60 2M120 96c26 4 50-6 80 0" stroke="#4A2444" stroke-width="10" stroke-linecap="round" opacity=".7"/></svg>
           </div>
           <h3>A tinta não cobriu.</h3>
           <p class="before">Mais uma demão, e mais outra, e a parede ainda manchada.</p>
@@ -443,7 +450,7 @@ html.pinned .reveal .r{opacity:1;transform:none}
         </article>
         <article class="pain r" style="--i:4;--gc:var(--t-blue);--gd:-5s">
           <div class="ill" aria-hidden="true">
-            <svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice"><g fill="#3554FF"><rect x="62" y="44" width="56" height="78" rx="8"/><rect x="128" y="44" width="56" height="78" rx="8" opacity=".55"/><rect x="194" y="44" width="56" height="78" rx="8" opacity=".25"/></g><g fill="none" stroke="#C9C0DA" stroke-width="3"><path d="M70 44c0-16 40-16 40 0M136 44c0-16 40-16 40 0M202 44c0-16 40-16 40 0"/></g><text x="222" y="92" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="26" fill="#FFC21A">?</text></svg>
+            <svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice"><g fill="#3554FF"><rect x="62" y="44" width="56" height="78" rx="8"/><rect x="128" y="44" width="56" height="78" rx="8" opacity=".55"/><rect x="194" y="44" width="56" height="78" rx="8" opacity=".25"/></g><g fill="none" stroke="#D8C6D2" stroke-width="3"><path d="M70 44c0-16 40-16 40 0M136 44c0-16 40-16 40 0M202 44c0-16 40-16 40 0"/></g><text x="222" y="92" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="26" fill="#FFC21A">?</text></svg>
           </div>
           <h3>Sobrou lata. Ou faltou.</h3>
           <p class="before">Comprar no chute sai caro, e voltar na loja no meio da pintura atrasa tudo.</p>
@@ -452,7 +459,7 @@ html.pinned .reveal .r{opacity:1;transform:none}
         </article>
       </div>
     </div>
-    <div class="drip-edge" aria-hidden="true" style="--fill:var(--canvas)"></div>
+    <div class="drip-edge" aria-hidden="true" style="--fill:var(--panel)"></div>
   </section>
 
   <!-- 2. calculadora: o momento interativo -->
@@ -465,7 +472,7 @@ html.pinned .reveal .r{opacity:1;transform:none}
         <form class="r" style="--i:3" id="calc-form" onsubmit="return false" aria-describedby="calc-note">
           <div class="field">
             <label for="c-larg">Largura da parede</label>
-            <div class="row"><input type="range" id="c-larg" min="1" max="20" step="0.5" value="4"><output for="c-larg" id="o-larg">4 m</output></div>
+            <div class="row"><input type="range" id="c-larg" min="1" max="40" step="0.5" value="4"><output for="c-larg" id="o-larg">4 m</output></div>
           </div>
           <div class="field">
             <label for="c-alt">Altura da parede</label>
@@ -495,6 +502,7 @@ html.pinned .reveal .r{opacity:1;transform:none}
               <div class="counter" role="group" aria-labelledby="l-jan"><button type="button" data-ct="jan" data-d="-1" aria-label="Menos uma janela">−</button><span id="v-jan" aria-live="polite">1</span><button type="button" data-ct="jan" data-d="1" aria-label="Mais uma janela">+</button></div>
             </div>
           </div>
+          <p class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 3z"/></svg><span>Parede de quarto costuma ter 2,6 m a 2,8 m de altura. Mediu o cômodo inteiro? Some as larguras de todas as paredes e use 1 parede.</span></p>
         </form>
         <div class="out r" style="--i:4" aria-live="polite">
           <div class="can" aria-hidden="true"><div class="fill" id="can-fill"></div><span class="lbl mono">Sua tinta</span></div>
@@ -547,7 +555,6 @@ html.pinned .reveal .r{opacity:1;transform:none}
         </article>
       </div>
     </div>
-    <div class="drip-edge" aria-hidden="true" style="--fill:var(--panel)"></div>
   </section>
 
   <!-- 4. cor na hora -->
@@ -569,7 +576,7 @@ html.pinned .reveal .r{opacity:1;transform:none}
         </div>
       </div>
     </div>
-    <div class="drip-edge" aria-hidden="true" style="--fill:var(--canvas)"></div>
+    <div class="drip-edge" aria-hidden="true" style="--fill:var(--panel)"></div>
   </section>
 
   <!-- 5. como funciona -->
@@ -616,7 +623,7 @@ html.pinned .reveal .r{opacity:1;transform:none}
       <div class="visit">
         <div class="card r" style="--i:2">
           <dl>
-            <div><dt class="mono">Endereço</dt><dd>Av. Melício Machado, 540<br>Aruana, Aracaju/SE · 49038-443</dd></div>
+            <div><dt class="mono">Endereço</dt><dd>Av. Melício Machado, 540<br>Aruana, Aracaju/SE · <span style="white-space:nowrap">49038-443</span></dd></div>
             <div><dt class="mono">Telefone</dt><dd><a href="tel:+557932436199">(79) 3243-6199</a></dd></div>
             <div><dt class="mono">WhatsApp</dt><dd><a class="js-wa" href="https://wa.me/5579981018248" target="_blank" rel="noopener">(79) 98101-8248</a></dd></div>
             <div><dt class="mono">Horário</dt><dd>Abre às 8h</dd></div>
@@ -629,7 +636,7 @@ html.pinned .reveal .r{opacity:1;transform:none}
         </div>
         <div class="map r" style="--i:3">
           <iframe title="Mapa da Casa Das Tintas na Av. Melício Machado, 540, Aracaju" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=-37.0686%2C-10.9970%2C-37.0566%2C-10.9870&amp;layer=mapnik"></iframe>
-          <svg class="pin" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 2C10 2 2 10 2 20c0 13 18 30 18 30s18-17 18-30C38 10 30 2 20 2z" fill="#FFC21A"/><circle cx="20" cy="20" r="7" fill="#150F24"/></svg>
+          <svg class="pin" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 2C10 2 2 10 2 20c0 13 18 30 18 30s18-17 18-30C38 10 30 2 20 2z" fill="#FFC21A"/><circle cx="20" cy="20" r="7" fill="#1D0A1B"/></svg>
         </div>
       </div>
     </div>
@@ -724,7 +731,7 @@ $$('.band').forEach(band => {
 /* ---------- herói: rolagem controla o vídeo ---------- */
 const hero = $('#hero'), stage = $('.stage'), video = $('#hero-video'), ring = $('.ring'), posterLayer = $('.poster'), cue = $('.cue');
 const VIDEO_URL = 'assets/hero-scrub.mp4', POSTER_URL = 'assets/hero-poster.jpg';
-const VIDEO_BYTES = 9000000;
+const VIDEO_BYTES = 6893156;
 const bands = $$('.band').map(el => ({ el, a: +el.dataset.a, b: +el.dataset.b, ramp: el.dataset.ramp ? +el.dataset.ramp : null, first: el.hasAttribute('data-first'), last: el.hasAttribute('data-last'), op: -1, k: -1, live: null }));
 
 function heroProgress() {
@@ -895,21 +902,14 @@ document.addEventListener('visibilitychange', () => document.body.classList.togg
 const DRIP_COLORS = ['#FF4A2E', '#FFC21A', '#00B3A4', '#3554FF', '#E8318A'];
 const edges = $$('.drip-edge').map((el, n) => {
   const R = rng(311 + n * 53);
-  let drops = '', beads = '';
-  const W = 1440, base = 26;
-  let path = 'M0 0H' + W + 'V' + base;
-  const xs = [];
-  for (let x = 60 + R() * 80; x < W - 40; x += 90 + R() * 150) xs.push(x);
-  for (let i = xs.length - 1; i >= 0; i--) {
-    const x = xs[i], w = 18 + R() * 26, len = 30 + R() * 80;
-    path += 'L' + (x + w / 2 + 6).toFixed(1) + ' ' + base + 'Q' + (x + w / 2).toFixed(1) + ' ' + base + ' ' + (x + w / 2 - 1).toFixed(1) + ' ' + (base + 6);
+  let drops = '';
+  const W = 1440, base = 14;
+  for (let x = 60 + R() * 80; x < W - 40; x += 90 + R() * 150) {
+    const w = 12 + R() * 20, len = 24 + R() * 70;
     const col = DRIP_COLORS[Math.floor(R() * DRIP_COLORS.length)];
-    drops += '<path class="drop" style="fill:' + (R() < 0.35 ? col : 'currentColor') + '" d="M' + (x - w / 2).toFixed(1) + ' ' + (base - 2) + 'V' + (base + len).toFixed(1) + 'a' + (w / 2).toFixed(1) + ' ' + (w / 2).toFixed(1) + ' 0 0 0 ' + w.toFixed(1) + ' 0V' + (base - 2) + 'z"/>';
-    if (R() < 0.5) beads += '<circle class="bead" style="--len:' + (len * 0.9).toFixed(0) + 'px;fill:currentColor" cx="' + x.toFixed(1) + '" cy="' + (base + len + w).toFixed(1) + '" r="' + (w * 0.28).toFixed(1) + '"/>';
-    path += 'L' + (x - w / 2 - 6).toFixed(1) + ' ' + base;
+    drops += '<path class="drop" style="fill:' + col + '" d="M' + (x - w / 2).toFixed(1) + ' ' + (base - 2) + 'V' + (base + len).toFixed(1) + 'a' + (w / 2).toFixed(1) + ' ' + (w / 2).toFixed(1) + ' 0 0 0 ' + w.toFixed(1) + ' 0V' + (base - 2) + 'z"/>';
   }
-  path += 'L0 ' + base + 'Z';
-  el.innerHTML = '<svg viewBox="0 0 ' + W + ' 140" preserveAspectRatio="none"><path d="M0 0H' + W + 'V' + base + 'C' + (W * .75) + ' ' + (base + 8) + ' ' + (W * .25) + ' ' + (base - 8) + ' 0 ' + base + 'Z" fill="currentColor"/>' + drops + beads + '</svg>';
+  el.innerHTML = '<svg viewBox="0 0 ' + W + ' 140" preserveAspectRatio="none"><path d="M0 0H' + W + 'V' + base + 'C' + (W * .75) + ' ' + (base + 8) + ' ' + (W * .25) + ' ' + (base - 8) + ' 0 ' + base + 'Z" fill="currentColor"/>' + drops + '</svg>';
   return { el, d: -1, on: false };
 });
 const edgeIO = new IntersectionObserver(es => es.forEach(e => { const ed = edges.find(x => x.el === e.target); if (ed) ed.on = e.isIntersecting; }), { rootMargin: '20% 0px' });
@@ -975,7 +975,8 @@ function bestCans(L) {
     const vol = a * 18 + b * 3.6 + c * 0.9;
     if (vol + 1e-9 < L) continue;
     const cnt = a + b + c;
-    if (!best || vol < best.vol - 1e-9 || (Math.abs(vol - best.vol) < 1e-9 && cnt < best.cnt)) best = { vol, cnt, q: [a, b, c] };
+    const score = vol + cnt;   /* latas maiores saem mais em conta por litro: cada lata a mais pesa 1 L na escolha */
+    if (!best || score < best.score - 1e-9) best = { score, q: [a, b, c] };
   }
   return best.q;
 }
@@ -988,8 +989,8 @@ function calc() {
   elA.textContent = fmt(area) + ' m²';
   const items = q.map((n, i) => n ? '<li>' + CANS[i].n + '<span>× ' + n + '</span></li>' : '').join('');
   elList.innerHTML = items || '<li>Ajuste as medidas<span>·</span></li>';
-  elFill.style.setProperty('--lv', clamp(litros / 40, 0.06, 1).toFixed(3));
-  const desc = q.map((n, i) => n ? n + ' × ' + CANS[i].n.toLowerCase() : '').filter(Boolean).join(', ');
+  elFill.style.setProperty('--lv', clamp(litros / 20, 0.12, 1).toFixed(3));
+  const desc = q.map((n, i) => n ? n + ' × ' + CANS[i].n.charAt(0).toLowerCase() + CANS[i].n.slice(1) : '').filter(Boolean).join(', ');
   elWa.href = waLink('Olá, Casa Das Tintas! Fiz a conta no site: ' + st.par + ' parede(s) de ' + fmt(st.larg) + ' m × ' + fmt(st.alt) + ' m, ' + st.por + ' porta(s), ' + st.jan + ' janela(s), ' + st.dem + ' demão(s). Deu ' + fmt(area) + ' m² e cerca de ' + fmt(litros) + ' litros (' + desc + '). Pode conferir pra mim?');
   const from = shownL, to = litros, t0 = performance.now();
   if (calcRaf) cancelAnimationFrame(calcRaf);
